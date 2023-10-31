@@ -27,11 +27,18 @@ h3 {
 p, pre {
     font-size: 2em;
 }
+.small {
+    font-size: 1.3em;
+}
 .big {
     font-size: 3.7em;
 }
 .huge {
     font-size: 4.7em;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 
@@ -92,6 +99,9 @@ hr.short {
     margin: auto;
     text-align: center;
 }
+.right {
+    text-align: right;
+}
 
 
 .serif {
@@ -99,6 +109,10 @@ hr.short {
 }
 .page-title {
     color: red;
+}
+
+.sweet-shadow {
+    text-shadow: 0 0 7px #ffd7d7;
 }
 
 
@@ -204,12 +218,12 @@ hr.short {
 
 .halloween-box {
     $position-offset: 2em;
-    $pad-rl: 3px;
+    $pad-rl: 5px;
 
     background: linear-gradient(
         to bottom,
-        black 20%,
-        #fc3700 100%
+       black,
+        #fca800 100%
     );
     height: auto;
     margin: 0;
@@ -221,15 +235,16 @@ hr.short {
     left: $position-offset;
 
     .halloween-content {
-        background-color: #000000aa;
+        background-color: #00000088;
         // height: 91%;
         padding: 1em;
+        // text-align: center;
         // position: relative;
         // top: 0;
         // bottom: -35px;
         // margin-bottom: -10px;
 
-        :first-child {
+        p:first-child {
             background: linear-gradient(
                 black, black 70%,
                 #ff8d58 100%
@@ -238,5 +253,45 @@ hr.short {
             width: -moz-fit-content;
             width: fit-content;
         }
+
+        img {
+            max-width: 100%;
+        }
+
+        > p.sweet-shadow {
+            animation: splash 1.8s infinite;
+            &:hover {
+                text-shadow: inherit;
+            }
+        }
+
+        > p:hover {
+            text-shadow: 0 0 3px #fdb6b6;
+        }
+
+        > .horizon-img {
+            text-align: center;
+            > img {
+                max-width: 40%;
+                margin: 0 3px;
+                box-shadow: 0 0 4px #ffe100;
+                
+                &:hover {
+                    box-shadow: 0 0 4px #ffe100, 0 0 8px white;
+                }
+            }
+        }
+    }
+}
+
+@keyframes splash {
+    from {
+        text-shadow: 0 0 7px #ffd7d7;
+    }
+    50% {
+        text-shadow: 0 0 1px #ffd7d7;
+    }
+    to {
+        text-shadow: 0 0 7px #ffd7d7;
     }
 }
