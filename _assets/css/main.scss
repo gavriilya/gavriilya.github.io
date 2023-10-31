@@ -1,0 +1,241 @@
+---
+---
+
+html {
+    font-size: 62.5%;
+    color: red;
+    background: black;
+    height: 100%;
+    // display: flex;
+}
+
+body {
+    margin: auto;
+    padding: 10%;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+h2 {
+    font-size: 3.5rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+
+p, pre {
+    font-size: 2em;
+}
+.big {
+    font-size: 3.7em;
+}
+.huge {
+    font-size: 4.7em;
+}
+
+
+pre {
+    font-family: monospace;
+}
+code {
+    text-align: left;
+}
+
+
+a {
+    color: red;
+    font-weight: bold;
+}
+a:hover {
+    background-color: red;
+    color: #d7d7d7;
+}
+a:visited {
+    color: #b40000;
+}
+a:visited:hover {
+    background-color: #b40000;
+    color: #d7d7d7;
+}
+
+
+hr.top {
+    color: #720000;
+    background-color: #720000;
+    width: 50%;
+    height: 1px;
+    border-width: 0;
+}
+hr.bottom {
+    color: #720000;
+    background-color: #720000;
+    width: 90%;
+    height: 1px;
+    border-width: 0;
+    margin-top: 4em;
+    margin-bottom: 1.5em;
+}
+hr.short {
+    width: 10%;
+    height: 0px;
+    border-width: .2px;
+    color: #720000;
+    background-color: #720000;
+    border-color: #720000;
+    border-style: dashed;
+}
+
+
+.center {
+    // width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+
+.serif {
+    font-family: serif;
+}
+.page-title {
+    color: red;
+}
+
+
+/* === === === HOME === === === */
+.home {
+    width: 100%;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    font-size: 2.5em;
+}
+.home-list {
+    /* list parent */
+    margin-top: 1em;
+}
+.home-post {
+    margin: 1.4em 0 1.4em 0;
+}
+.post-link-date {
+    /* color: #a70101; */
+    color: #d20000;
+    font-size: 0.7em;
+}
+
+
+/* === === === POST === === === */
+.post-content {
+    width: 100%;
+    // h1 {
+    //     font-size: 3em;
+    // }
+}
+
+
+.paper-wrapper {
+
+    p {
+        // text-align: left;
+        // font-size: 1.5em;
+        // letter-spacing: .1em;
+        // margin: 0%;
+        // padding: 10px .7em 9px .7em;
+        // // border-bottom: solid 1px #595959;
+        // width: 100%;
+        // height: 31px;
+        // // overflow: hidden;
+        // // text-overflow: ellipsis;
+
+        font-size: 14px;
+        height: 37px;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        height: 36px;
+        background: linear-gradient(
+            black, black 31px,
+            red 35px, red 36px
+        );
+        // margin-bottom: 1em;
+    }
+
+    .paper-content {
+        background: repeating-linear-gradient(
+            black, black 29px,
+            red 30px, red 31px
+        );
+    }
+}
+
+
+.bg-wrap {
+  display: flex;
+  //width: 50vw;
+  width: 100%;
+  margin: auto;
+  max-width: 22em;
+
+  position: relative;
+  padding: 30% 2em;
+//   box-sizing: border-box;
+
+  $border: 3px;
+//   color: #FFF;
+  background: #000;
+  background-clip: padding-box; /* !importanté */
+  border: solid $border transparent; /* !importanté */
+//   border-radius: 1em;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -$border; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(to bottom, #a60000, #ff6f00);
+  }
+}
+
+
+
+
+.halloween-box {
+    $position-offset: 2em;
+    $pad-rl: 3px;
+
+    background: linear-gradient(
+        to bottom,
+        black 20%,
+        #fc3700 100%
+    );
+    height: auto;
+    margin: 0;
+    padding: 0 $pad-rl 0 $pad-rl;
+    position: absolute;
+    top: $position-offset;
+    right: $position-offset;
+    // bottom: $position-offset;
+    left: $position-offset;
+
+    .halloween-content {
+        background-color: #000000aa;
+        // height: 91%;
+        padding: 1em;
+        // position: relative;
+        // top: 0;
+        // bottom: -35px;
+        // margin-bottom: -10px;
+
+        :first-child {
+            background: linear-gradient(
+                black, black 70%,
+                #ff8d58 100%
+            );
+            padding: 0 .5em;
+            width: fit-content;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+---
+---
+
+$bgcol: black;
+
+body {
+    color: red;
+    background-color: black;
+}
+
+@import
+    "layout.css",
+    "base.css"
+;

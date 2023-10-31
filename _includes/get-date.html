@@ -1,0 +1,7 @@
+{%- assign get_date_p0 = get_date_p0 | default: page.date | default: site.time -%}
+{%- assign ja_day = get_date_p0 | date: '%w' | plus: 0 -%}
+{%- assign ja_day = site.data.ja.days[ja_day] -%}
+{%- assign date_fmt = '%Y' | append: site.data.ja.vars.year -%}
+{%- assign date_fmt = date_fmt | append: '%m' | append: site.data.ja.vars.month -%}
+{%- assign date_fmt = date_fmt | append: '%d' | append: site.data.ja.vars.day -%}
+{{ get_date_p0 | date: date_fmt }}({{ ja_day }}) {{ get_date_p0 | date: '%R' }}

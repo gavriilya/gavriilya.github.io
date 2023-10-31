@@ -1,0 +1,122 @@
+html, body {
+    font-size: 62.5%;
+    color: red;
+    background-color: black;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+h2 {
+    font-size: 3.5rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+
+p, pre {
+    font-size: 3.3em;
+}
+.big {
+    font-size: 3.7em;
+}
+.huge {
+    font-size: 4.7em;
+}
+
+
+pre {
+    font-family: monospace;
+}
+code {
+    text-align: left;
+}
+
+
+a {
+    color: red;
+    font-weight: bold;
+}
+a:hover {
+    background-color: red;
+    color: #d7d7d7;
+}
+a:visited {
+    color: #b40000;
+}
+a:visited:hover {
+    background-color: #b40000;
+    color: #d7d7d7;
+}
+
+
+hr.top {
+    color: #720000;
+    background-color: #720000;
+    width: 50%;
+    height: 1px;
+    border-width: 0;
+}
+hr.bottom {
+    color: #720000;
+    background-color: #720000;
+    width: 90%;
+    height: 1px;
+    border-width: 0;
+    margin-top: 4em;
+    margin-bottom: 1.5em;
+}
+hr.short {
+    width: 10%;
+    height: 0px;
+    border-width: .2px;
+    color: #720000;
+    background-color: #720000;
+    border-color: #720000;
+    border-style: dashed;
+}
+
+
+.center {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+
+.serif {
+    font-family: serif;
+}
+.page-title {
+    color: red;
+}
+
+
+/* === === === HOME === === === */
+.home {
+    width: 100%;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    font-size: 2.5em;
+}
+.home-list {
+    /* list parent */
+    margin-top: 1em;
+}
+.home-post {
+    margin: 1.4em 0 1.4em 0;
+}
+.post-link-date {
+    /* color: #a70101; */
+    color: #d20000;
+    font-size: 0.7em;
+}
+
+
+/* === === === POST === === === */
+.post-content {
+    width: 100%;
+    p {
+        font-size: 1.2em;
+    }
+}

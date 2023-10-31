@@ -1,0 +1,54 @@
+---
+layout: root
+---
+<div class="home center">
+  {%- if page.title -%}
+  <h1 class="page-title">{{ site.title }}</h1>
+  {%- endif -%}
+
+  <!-- SITE POSTS -->
+  {%- if site.posts.size > 0 -%}
+  <hr class="top"/>
+
+  <div class="home-list">
+    {%- assign i = site.posts.size -%}
+    {%- for post in site.posts -%}
+    <div class="home-post">
+      <a href="{{ post.url | relative_url }}">
+        {{- post.title | escape -}}
+      </a>
+      <div class="post-link-date">
+        {%- assign get_date_p0 = post.date -%}
+        {%- include get-date.html -%}
+      </div>
+    </div>
+    {%- assign i = i | minus: 1 -%}
+    {%- if i > 0 -%}
+    <hr class="short"/>
+    {%- endif -%}
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+
+  <hr class="bottom"/>
+
+  <div class="footer-pages">
+
+    {%- comment -%}
+    {%- for page in site.pages -%}
+    <div class="home-post">
+      <a href="{{ page.url | relative_url }}">
+        {{- page.title | escape -}}
+      </a>
+      <!-- <div class="post-link-date">
+        {%- assign get_date_p0 = page.date -%}
+        {%- include get-date.html -%}
+      </div> -->
+    </div>
+    {% endfor -%}
+    {%- endcomment -%}
+
+    <div class="footer-about"><a href="/about/">このサイトについて</a></div>
+
+  </div>
+</div>
