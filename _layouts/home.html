@@ -29,11 +29,9 @@ layout: root
     {%- endfor -%}
   </div>
   {%- endif -%}
-
-  <hr class="bottom"/>
-
-  <div class="footer-pages">
-
+  
+  <footer>
+    <hr class="bottom"/>
     {%- comment -%}
     {%- for page in site.pages -%}
     <div class="home-post">
@@ -47,8 +45,8 @@ layout: root
     </div>
     {% endfor -%}
     {%- endcomment -%}
-
     <div class="footer-about"><a href="/about/">このサイトについて</a></div>
-
-  </div>
+    <br>
+    <img src="https://count.getloli.com/get/@index?theme=rule34" alt="Visitor Counter"/>
+  </footer>
 </div>

@@ -6,12 +6,16 @@ html {
     color: red;
     background: black;
     height: 100%;
-    // display: flex;
+    min-height: 100%;
 }
 
 body {
     margin: auto;
     padding: 10%;
+    height: 100%;
+    min-height: 100%;
+    // display: flex;
+    // flex-direction: column;
 }
 
 h1 {
@@ -115,6 +119,15 @@ hr.short {
     text-shadow: 0 0 7px #ffd7d7;
 }
 
+
+/* === === === FOOTER === === === */
+footer {
+    // flex: none;
+    // margin-top: 50%;
+    padding: 2em 0 2em 0;
+    margin: auto;
+    text-align: center;
+}
 
 /* === === === HOME === === === */
 .home {
